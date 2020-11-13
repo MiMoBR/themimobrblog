@@ -8,7 +8,6 @@
 		<title>Insert title here</title>
 		
 		<jsp:include page="/includes/top.jsp"></jsp:include>
-<!-- 		http://localhost:8080/mimobr/index.jsp -->
 	</head>
 	<body>
 		<div class="container">
@@ -16,7 +15,7 @@
 				<jsp:include page="/includes/navbar.jsp"></jsp:include>
 				<div class="col-md-12">
 					<h1>
-						The blog!
+						Main Blog
 					</h1>
 				</div>
 			</div>

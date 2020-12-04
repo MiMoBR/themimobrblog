@@ -11,13 +11,14 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.itextpdf.text.pdf.PdfStructTreeController.returnType;
 import com.mimobr.commons.dbconnection.ConnectionFactory;
 
 
 
 public class LogInFormHelper {
 
-	private final static Logger logger = Logger.getLogger(LogInFormHelper .class.getName());
+//	private final static Logger logger = Logger.getLogger(LogInFormHelper .class.getName());
 
 	public String getTableName() {
 		return "MIMOBR_USER_LOGON";
@@ -37,39 +38,39 @@ public class LogInFormHelper {
 		return oLogInForm;
 	}
 	
-	public LogInForm insert(LogInForm oLogInForm, String createdBy) throws ClassNotFoundException {
-
+	public boolean  getUserLogIn(LogInForm oLogInForm) throws ClassNotFoundException {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		StringBuffer SQL_INSERT = new StringBuffer("");
+		StringBuffer SQL = new StringBuffer("");
+		boolean login = false;
+		
 		try {
 			conn = ConnectionFactory.getConnection();
 			
-			if (conn!= null){
-				SQL_INSERT.append("    INSERT INTO " + getTableName());
-				SQL_INSERT.append("    (LOGIN,PASSWORD) ");
-				SQL_INSERT.append("     VALUES (?, ?)");
-
-				pstmt = conn.prepareStatement(SQL_INSERT.toString());
+				SQL.append("    SELECT * FROM " + getTableName()	);
+				SQL.append("	WHERE LOGIN = ? AND PASSWORD = ? "	);
+				 
+				pstmt = conn.prepareStatement(SQL.toString());
+					
+				int pos = 1;
+				pstmt.setString(pos++, oLogInForm.getEmailLogIn());
+				pstmt.setString(pos++, oLogInForm.getPasswordLogIn());
 				
-				if (oLogInForm !=  null){
-					
-					int pos = 1;
-					pstmt.setString(pos++, oLogInForm.getEmailLogIn());
-					pstmt.setString(pos++, oLogInForm.getPasswordLogIn());
-					
-					System.out.println("SQL sys:" + SQL_INSERT.toString() + " " + oLogInForm.toString() + " createdBy:" + createdBy);
-					
-					rs = pstmt.executeQuery();
-					
-//					if (rs.next())
-//						System.err.println(">>>>>>>>>>>>" +rs.getInt("ID"));
+				
+				System.out.println("SQL sys:" + SQL.toString() + " " + oLogInForm.toString() );
+				
+				rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					System.err.println("ENTROU NO TRUE");
+					login = true;
 				}
-			}
+				
 		} catch (SQLException sqlEx) {
 			sqlEx.printStackTrace();
-			
+		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			try {
 				if (rs != null) {
@@ -84,6 +85,6 @@ public class LogInFormHelper {
 
 			ConnectionFactory.closeConnection(conn);
 		}
-		return oLogInForm;
+		return login;
 	}
 }

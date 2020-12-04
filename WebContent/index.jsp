@@ -8,7 +8,7 @@
 		<title>Insert title here</title>
 		
 		<jsp:include page="/includes/top.jsp"></jsp:include>
-<!-- 		http://localhost:8080/mimobr/index.jsp -->
+<!-- 		http://localhost:8080/Mimobr/index.jsp   -->
 	</head>
 	<body>
 		<div class="container">

@@ -4,6 +4,7 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
     <display-name>ServletForm</display-name>
     <servlet-name>ServletForm</servlet-name>
@@ -12,5 +13,16 @@
   <servlet-mapping>
     <servlet-name>ServletForm</servlet-name>
     <url-pattern>/ServletForm</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <display-name>Blog</display-name>
+    <servlet-name>Blog</servlet-name>
+    <servlet-class>com.mimobr.servlet.Blog</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Blog</servlet-name>
+    <url-pattern>/Blog</url-pattern>
+    <url-pattern>/Blog/*</url-pattern>
   </servlet-mapping>
 </web-app>

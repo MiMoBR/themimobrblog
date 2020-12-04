@@ -1,0 +1,33 @@
+
+
+
+#mainContent{
+	display: flex;
+    flex-wrap: wrap;
+}
+.mainContentOne{
+	background-color: #343a40;
+    padding: 1rem;
+    color: #ffffff;
+}
+.mainContentborder a{
+	text-decoration: none;
+	cursor: pointer;
+}
+.mainContentborder{
+	width: calc(100%*.5);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.mainContentOne .img{
+    display: flex;
+    justify-content: center;
+}
+.mainContentOne .about{
+	display: flex;
+    justify-content: space-between;
+}
+.mainContentOne .title{
+	text-align: center;
+}

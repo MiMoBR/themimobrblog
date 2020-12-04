@@ -8,6 +8,7 @@
 		<title>Insert title here</title>
 		
 		<jsp:include page="/includes/top.jsp"></jsp:include>
+		
 	</head>
 	<body>
 		<div class="container">
@@ -15,11 +16,14 @@
 				<jsp:include page="/includes/navbar.jsp"></jsp:include>
 				<div class="col-md-12">
 					<h1>
-						Main Blog
+						Our content for you!
 					</h1>
 				</div>
+				<div class="col-md-12">
+					<h2>Choose which one that you want to want!</h2> 
+					<jsp:include page="mainContent.jsp"></jsp:include>
+				</div>		
 			</div>
 		</div>
-		<jsp:include page="/includes/scripts.jsp"></jsp:include>
 	</body>
 </html>

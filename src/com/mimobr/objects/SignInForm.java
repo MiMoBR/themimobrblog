@@ -5,31 +5,31 @@ import java.sql.Timestamp;
 
 
 
-public class LogInForm {
+public class SignInForm {
 
-//	private final static Logger logger = Logger.getLogger(LogInForm.class.getName());
+//	private final static Logger logger = Logger.getLogger(SignInForm.class.getName());
 	
 	protected int ivId;
 	protected String ivEmailLogIn;
 	protected String ivPasswordLogIn;
 	protected Timestamp ivDtCreated;
 	
-	protected static LogInFormHelper LogInFormHelperInstance;
+	protected static SignInFormHelper SignInFormHelperInstance;
 
 	public String getTableName() {
 		return getHelper().getTableName();
 	}
 	
-	public static LogInFormHelper getHelper() {
-		if (LogInFormHelperInstance == null)
-			LogInFormHelperInstance = new LogInFormHelper();
-		return LogInFormHelperInstance;
+	public static SignInFormHelper getHelper() {
+		if (SignInFormHelperInstance == null)
+			SignInFormHelperInstance = new SignInFormHelper();
+		return SignInFormHelperInstance;
 	}
 	
-	public LogInForm() {
+	public SignInForm() {
 	}
 	
-	public LogInForm(String emailLogIn, String passwordLogIn){
+	public SignInForm(String emailLogIn, String passwordLogIn){
 		ivEmailLogIn = emailLogIn;
 		ivPasswordLogIn = passwordLogIn;
 	}
@@ -65,12 +65,12 @@ public class LogInForm {
 	public void setDtCreated(Timestamp dtCreated) {
 		ivDtCreated = dtCreated;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "LogInForm [ivId=" + ivId + ", ivEmailLogIn=" + ivEmailLogIn + ", ivPasswordLogIn=" + ivPasswordLogIn
+		return "SignInForm [ivId=" + ivId + ", ivEmailLogIn=" + ivEmailLogIn + ", ivPasswordLogIn=" + ivPasswordLogIn
 				+ ", ivDtCreated=" + ivDtCreated + "]";
-	}	
-	
+	}
+
 	
 }

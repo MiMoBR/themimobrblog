@@ -4,21 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.apache.log4j.Logger;
-
-import com.itextpdf.text.pdf.PdfStructTreeController.returnType;
 import com.mimobr.commons.dbconnection.ConnectionFactory;
 
 
 
 public class LogInFormHelper {
 
-//	private final static Logger logger = Logger.getLogger(LogInFormHelper .class.getName());
 
 	public String getTableName() {
 		return "MIMOBR_USER_LOGON";

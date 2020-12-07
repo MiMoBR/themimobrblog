@@ -4,21 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
-
-import com.google.gson.Gson;
 import com.mimobr.commons.dbconnection.ConnectionFactory;
 
 public class SignInFormHelper {
 
-//	private final static Logger logger = Logger.getLogger(SignInFormHelper .class.getName());
-	
 	public String getTableName() {
 		return "MIMOBR_USER_LOGON";
 	}

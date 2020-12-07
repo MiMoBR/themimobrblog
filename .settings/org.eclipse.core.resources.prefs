@@ -1,3 +1,15 @@
 eclipse.preferences.version=1
+encoding//src/com/mimibr/utils/StringTasks.java=UTF-8
+encoding//src/com/mimobr/commons/dbconnection/ConnectionFactory.java=ISO-8859-1
+encoding//src/com/mimobr/innatilization/ApplicationConfiguration.java=ISO-8859-1
+encoding//src/com/mimobr/objects/LogInFormHelper.java=ISO-8859-1
+encoding//src/com/mimobr/objects/SaveContentForm.java=ISO-8859-1
+encoding//src/com/mimobr/objects/SaveContentFormHelper.java=ISO-8859-1
+encoding//src/com/mimobr/objects/SignInForm.java=ISO-8859-1
+encoding//src/com/mimobr/objects/SignInFormHelper.java=ISO-8859-1
+encoding//src/com/mimobr/servlet/Blog.java=ISO-8859-1
 encoding//src/com/mimobr/servlet/ServletForm.java=ISO-8859-1
+encoding//src/com/mimobr/tester/HelloWorld.java=ISO-8859-1
+encoding//src/com/mimobr/tester/testConnection.java=ISO-8859-1
+encoding/<project>=ISO-8859-1
 encoding/src=UTF-8

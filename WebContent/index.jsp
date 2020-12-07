@@ -21,6 +21,6 @@
 				</div>
 			</div>
 		</div>
-		<jsp:include page="/includes/scripts.jsp"></jsp:include>
+		<jsp:include page="/includes/scripts.jsp"></jsp:include> 
 	</body>
 </html>

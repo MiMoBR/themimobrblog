@@ -139,7 +139,7 @@ public class ServletForm extends HttpServlet {
 	
 	public void getLogInForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LogInForm oLogInForm = null;
-		String message = "Operação efectuada com sucesso!";
+		String message = "Operacao efectuada com sucesso";
 		String type = "ok";
 //		String QUOTES = "\"";
 		
@@ -158,13 +158,13 @@ public class ServletForm extends HttpServlet {
 				request.setAttribute("emailLogIn", emailLogIn);
 				request.getRequestDispatcher("/backoffice/mainBackOffice.jsp").forward(request, response);				
 			}else{
-				message = "Não cadastrado";
+				message = "Nao cadastrado";
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("/access/login.jsp").forward(request, response);
 			}
 
 		} catch (ClassNotFoundException e) {
-			message = "Matrícula já registada em sistema";
+			message = "Matricula ja registada em sistema";
 			type = "error";
 			e.printStackTrace();
 		}

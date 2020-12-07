@@ -140,9 +140,6 @@ public class ServletForm extends HttpServlet {
 	public void getLogInForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LogInForm oLogInForm = null;
 		String message = "Operacao efectuada com sucesso";
-		String type = "ok";
-//		String QUOTES = "\"";
-		
 		try{
 			String emailLogIn = request.getParameter("emailLogIn");
 			String passwordLogIn = request.getParameter("passwordLogIn");
@@ -165,7 +162,6 @@ public class ServletForm extends HttpServlet {
 
 		} catch (ClassNotFoundException e) {
 			message = "Matricula ja registada em sistema";
-			type = "error";
 			e.printStackTrace();
 		}
 		
